@@ -1,18 +1,14 @@
-interface MeuBotaoProps {
-  texto: string
-}
+import { Attendee } from "./components/attendee_list";
+import { Header } from "./components/header";
 
-function MeuBotao(props: MeuBotaoProps){
-  return <button className="bg-orange-400 h-10 px-3 rounded font-medium ">{props.texto}</button>
-}
 export function App() {
-  return (
-    <div className="flex gap-2">
-      <MeuBotao texto="Cique aqui"></MeuBotao>
-      <MeuBotao texto="Botão 2"></MeuBotao>
-      <MeuBotao texto="botão 3"></MeuBotao>
+  return(
+    <div className="max-w-[1216px] mx-auto py-5 flex flex-col gap-5">
+      <Header/>
+      <Attendee/>
+
     </div>
-    );
+  )
 }
 
 
